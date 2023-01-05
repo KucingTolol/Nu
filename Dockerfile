@@ -3,6 +3,7 @@ FROM node:lts-buster
 RUN apt-get update && \
   apt-get install -y \
   nodejs \
+  unzip \
   python \
   python2 \
   bash \
@@ -14,6 +15,8 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 COPY package.json .
+
+RUN unzip database.zip
 
 RUN npm i -g npm
 
