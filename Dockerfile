@@ -16,8 +16,6 @@ RUN apt-get update && \
 
 COPY package.json .
 
-RUN unzip database.zip
-
 RUN npm i -g npm
 
 RUN npm install
